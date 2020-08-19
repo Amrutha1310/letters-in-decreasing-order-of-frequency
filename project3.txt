@@ -1,0 +1,9 @@
+import operator
+if __name__ == '__main__':
+    string = "mississippi"
+    d = dict()
+    for letter in string:
+       if letter not in d:
+           d[letter] = string.count(letter)
+    answer = sorted(d.items(), key=operator.itemgetter(1), reverse=True)
+    print(answer)
